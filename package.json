@@ -8,5 +8,7 @@
   },
   "dependencies": {
     "serverless": "^2.0.0"
-  }
+  },
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT"
 }
