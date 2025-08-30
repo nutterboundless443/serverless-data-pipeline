@@ -9,6 +9,6 @@
   "dependencies": {
     "serverless": "^2.0.0"
   },
-  "author": "Your Name <your.email@example.com>",
+  "author": "Your Name <yourname@example.com>",
   "license": "MIT"
 }
