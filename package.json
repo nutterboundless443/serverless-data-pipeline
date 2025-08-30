@@ -1,0 +1,12 @@
+{
+  "name": "serverless-data-pipeline",
+  "version": "1.0.0",
+  "description": "A serverless data processing pipeline example using AWS Lambda and API Gateway",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "serverless deploy"
+  },
+  "dependencies": {
+    "serverless": "^2.0.0"
+  }
+}
