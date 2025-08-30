@@ -21,6 +21,7 @@ resources:
       Type: 'AWS::S3::Bucket'
       Properties:
         BucketName: my-serverless-data-pipeline-bucket
+
     # DynamoDB table to store processed data
     DataTable:
       Type: 'AWS::DynamoDB::Table'
