@@ -27,9 +27,11 @@ resources:
       Properties:
         TableName: DataTable
         AttributeDefinitions:
+          # Define the primary key 'id' of type String
           - AttributeName: id
             AttributeType: S
         KeySchema:
+          # Specify 'id' as the HASH key
           - AttributeName: id
             KeyType: HASH
         ProvisionedThroughput:
