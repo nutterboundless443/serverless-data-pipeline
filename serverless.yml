@@ -1,0 +1,35 @@
+service: serverless-data-pipeline
+
+provider:
+  name: aws
+  runtime: python3.8
+  stage: dev
+  region: us-east-1
+
+functions:
+  dataProcessor:
+    handler: src/handler.process_data
+    events:
+      - http:
+          path: upload
+          method: post
+
+resources:
+  Resources:
+    DataBucket:
+      Type: 'AWS::S3::Bucket'
+      Properties:
+        BucketName: my-serverless-data-pipeline-bucket
+    DataTable:
+      Type: 'AWS::DynamoDB::Table'
+      Properties:
+        TableName: DataTable
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
